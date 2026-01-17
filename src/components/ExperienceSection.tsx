@@ -10,13 +10,15 @@ const experiences = [
     company: "Tecmo srl – Vema srl – Stein srl",
     role: "Ufficio acquisti e vendite – Segretaria amministrativa",
     period: "2025 - oggi",
-    description: "Gestione completa di richieste di offerte e ordini verso fornitori italiani ed esteri (in lingua inglese), preventivi, ordini clienti e gestione documentazione di trasporto per vendita al cliente SEA.",
+    description: "Gestione completa di richieste di offerte e ordini verso fornitori italiani ed esteri (in lingua inglese), preventivi, ordini clienti e gestione documentazione di trasporto per vendita a clienti (tra cui SEA).",
     responsibilities: [
       "Richieste di offerte e ordini verso fornitori italiani ed esteri",
       "Preventivi e gestione ordini clienti italiani",
-      "Emissione documenti di trasporto per cliente SEA",
+      "Emissione documenti di trasporto per clienti e fornitori",
       "Amministrazione Stein srl: pagamenti fatture e interfaccia commercialista",
-      "Segretariato per l'amministratore unico"
+      "Segretariato per l'amministratore unico (solo per Stein srl)",
+      "Coordinamento spedizioni tramite corrieri in abbonamento",
+      "Responsabile primo soccorso per la sede operativa"
     ],
     image: officeImg,
   },
@@ -28,7 +30,7 @@ const experiences = [
     responsibilities: [
       "Gestione ordini verso fornitori e clienti italiani",
       "Fatturazione e gestione magazzino ricambi",
-      "Emissione documenti di trasporto verso fornitori e clienti",
+      "Emissione documenti di trasporto per clienti e fornitori",
       "Coordinamento spedizioni tramite corrieri in abbonamento",
       "Interfaccia con fornitori esteri in lingua inglese (scritta e parlata)",
       "Amministrazione Stein srl dal 2023"
@@ -57,7 +59,7 @@ const experiences = [
     responsibilities: [
       "Gestione cassa e servizio clienti",
       "Amministrazione quotidiana dell'esercizio",
-      "Attestato somministrazione cibi e bevande (2010)"
+      "Attestato somministrazione cibi e bevande HACCP (2010)"
     ],
     image: null,
   },
@@ -65,7 +67,7 @@ const experiences = [
     company: "Nokia-Siemens Networks Italia S.p.A.",
     role: "Senior Software Developer",
     period: "2005 - 2009",
-    description: "Sviluppo sistema Radio Mobile GSM 3G potenziato verso capacità UMTS, coordinamento documentazione utente e sperimentazione metodologia Agile.",
+    description: "Sviluppo sistema Radio Mobile GSM 3G potenziato verso capacità UMTS, coordinamento documentazione utente e sperimentazione metodologia Agile. 20 anni nel settore telecomunicazioni.",
     responsibilities: [
       "Sviluppo sistema Radio Mobile GSM 3G evoluto UMTS",
       "Redazione documenti di specifica in inglese",

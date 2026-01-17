@@ -17,7 +17,7 @@ const skills = [
   {
     category: "Amministrazione",
     icon: FileText,
-    items: ["Gestione documentale", "Fatturazione", "Interfaccia commercialista", "Gestione fornitori"],
+    items: ["Gestione documentale", "Fatturazione Attiva", "Interfaccia commercialista", "Gestione fornitori"],
   },
   {
     category: "Logistica",
@@ -37,7 +37,7 @@ const skills = [
 ];
 
 const softwareSkills = [
-  "MS Office (Word, Excel, PowerPoint, Access)",
+  "MS Office (Word, Excel, PowerPoint)",
   "Outlook Express",
   "Gestionali aziendali",
   "Software di fatturazione",
@@ -58,7 +58,7 @@ const languages = [
 
 const certifications = [
   { name: "Diploma Perito Informatico", institution: "ITIS P. Hensemberger, Monza", year: "1989" },
-  { name: "Attestato somministrazione cibi e bevande", institution: "C.A.P.A.C., Milano", year: "2010" },
+  { name: "Attestato somministrazione cibi e bevande HACCP", institution: "C.A.P.A.C., Milano", year: "2010" },
   { name: "Operatore Socio Sanitario (OSS)", institution: "Istituto L.Clerici, Merate", year: "2013" },
   { name: "Attestato Primo Soccorso", institution: "", year: "2021" },
   { name: "Attestato BLSD", institution: "", year: "2013" },
@@ -209,7 +209,7 @@ const SkillsSection = () => {
         >
           <Heart className="w-5 h-5 text-accent flex-shrink-0" />
           <span className="text-sm text-muted-foreground">
-            Patente B • Disponibile a spostamenti
+            Patente B • Disponibile a spostamenti nel raggio di massimo circa 6 km
           </span>
         </motion.div>
       </div>
