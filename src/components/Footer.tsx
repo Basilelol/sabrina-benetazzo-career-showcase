@@ -75,12 +75,9 @@ const Footer = () => {
           <p>© {currentYear} Sabrina Benetazzo. Tutti i diritti riservati.</p>
           <p>
             Sito realizzato con ❤️ da{" "}
-            <a 
-              href="#" 
-              className="text-primary-foreground/80 hover:text-primary-foreground transition-colors underline underline-offset-2"
-            >
-              [Il tuo nome]
-            </a>
+            <span className="text-primary-foreground/80">
+              Alessandro Basile
+            </span>
           </p>
         </div>
       </div>

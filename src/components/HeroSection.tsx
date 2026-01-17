@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { MapPin, Mail, Briefcase } from "lucide-react";
+import { MapPin, Mail, Briefcase, Download } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
@@ -68,7 +69,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
-            className="flex flex-wrap gap-6 pt-4"
+            className="flex flex-wrap gap-6 pt-4 items-center"
           >
             <div className="flex items-center gap-2 opacity-90">
               <MapPin className="w-5 h-5" />
@@ -82,6 +83,25 @@ const HeroSection = () => {
               <Mail className="w-5 h-5" />
               <a href="#contatti" className="font-body hover:underline">Contattami</a>
             </div>
+          </motion.div>
+
+          {/* Download CV Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.5 }}
+            className="pt-4"
+          >
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold gap-2"
+            >
+              <a href="/CV_Sabrina_Benetazzo.pdf" download>
+                <Download className="w-5 h-5" />
+                Scarica CV
+              </a>
+            </Button>
           </motion.div>
         </motion.div>
       </div>

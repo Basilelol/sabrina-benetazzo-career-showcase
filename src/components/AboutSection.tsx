@@ -27,7 +27,7 @@ const AboutSection = () => {
               Nata a Vimercate (MB) nel 1970, sono una professionista con una carriera 
               variegata che spazia dallo sviluppo software alla segreteria amministrativa 
               e logistica. Ho iniziato come sviluppatrice software in Siemens nel 1989, 
-              maturando 14 anni di esperienza nel settore delle telecomunicazioni mobili.
+              maturando 20 anni di esperienza nel settore delle telecomunicazioni mobili.
             </p>
             <p className="text-body text-muted-foreground">
               Nel corso degli anni ho ampliato le mie competenze verso l'ambito amministrativo 
