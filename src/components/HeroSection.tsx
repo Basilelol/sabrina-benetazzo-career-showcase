@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Mail, Briefcase } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   return (
@@ -36,15 +37,32 @@ const HeroSection = () => {
             Sabrina Benetazzo
           </motion.h1>
 
-          <motion.p
+          {/* Profile photo and description side by side */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-body max-w-2xl opacity-90"
+            className="flex flex-col sm:flex-row items-start gap-6 pt-2"
           >
-            Oltre 15 anni di esperienza nella gestione amministrativa e logistica. 
-            Precisione, organizzazione e affidabilità al servizio delle aziende.
-          </motion.p>
+            {/* Profile Photo */}
+            <div className="flex-shrink-0">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary-foreground/30 shadow-lg">
+                <img
+                  src={profilePhoto}
+                  alt="Sabrina Benetazzo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-body max-w-xl opacity-90">
+              Oltre 35 anni di esperienza professionale, di cui più di 10 nel settore 
+              amministrativo e logistico. Precisione, organizzazione e affidabilità 
+              al servizio delle aziende. Background tecnico-informatico con competenze 
+              linguistiche avanzate in inglese.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -54,7 +72,7 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-2 opacity-90">
               <MapPin className="w-5 h-5" />
-              <span className="font-body">Italia</span>
+              <span className="font-body">Merate (LC), Italia</span>
             </div>
             <div className="flex items-center gap-2 opacity-90">
               <Briefcase className="w-5 h-5" />
@@ -62,7 +80,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2 opacity-90">
               <Mail className="w-5 h-5" />
-              <span className="font-body">Contattami</span>
+              <a href="#contatti" className="font-body hover:underline">Contattami</a>
             </div>
           </motion.div>
         </motion.div>

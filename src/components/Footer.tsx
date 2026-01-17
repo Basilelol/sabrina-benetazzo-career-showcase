@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,6 +14,7 @@ const Footer = () => {
             </h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Segretaria con esperienza in amministrazione e logistica. 
+              Background tecnico-informatico e competenze linguistiche avanzate.
               Disponibile per nuove opportunità professionali.
             </p>
           </div>
@@ -51,17 +52,19 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>sabrina.benetazzo@email.com</span>
+                <a href="mailto:sabrina.benetazzo@gmail.com" className="hover:text-primary-foreground transition-colors">
+                  sabrina.benetazzo@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+39 XXX XXX XXXX</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Linkedin className="w-4 h-4" />
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  LinkedIn
+                <a href="tel:+393339623363" className="hover:text-primary-foreground transition-colors">
+                  +39 333 962 3363
                 </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5" />
+                <span>Merate (LC), Italia</span>
               </li>
             </ul>
           </div>

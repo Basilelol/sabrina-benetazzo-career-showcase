@@ -24,16 +24,17 @@ const AboutSection = () => {
           {/* Right: Content */}
           <div className="md:col-span-2 space-y-6">
             <p className="text-body text-muted-foreground">
-              Sono una professionista con una solida esperienza nel campo dell'amministrazione 
-              e della logistica aziendale. Nel corso della mia carriera ho sviluppato competenze 
-              trasversali che mi permettono di gestire con efficienza le attività di segreteria, 
-              la documentazione amministrativa e il coordinamento delle operazioni logistiche.
+              Nata a Vimercate (MB) nel 1970, sono una professionista con una carriera 
+              variegata che spazia dallo sviluppo software alla segreteria amministrativa 
+              e logistica. Ho iniziato come sviluppatrice software in Siemens nel 1989, 
+              maturando 14 anni di esperienza nel settore delle telecomunicazioni mobili.
             </p>
             <p className="text-body text-muted-foreground">
-              Ho collaborato con aziende di diversi settori, tra cui il settore automotive 
-              e quello dei servizi, acquisendo una visione completa dei processi aziendali 
-              e delle dinamiche operative. La mia capacità di problem solving e l'attenzione 
-              ai dettagli sono i pilastri del mio approccio professionale.
+              Nel corso degli anni ho ampliato le mie competenze verso l'ambito amministrativo 
+              e logistico, gestendo con successo segreterie, front-desk, e processi di 
+              fatturazione in aziende come Doctor Glass e attualmente in Tecmo S.r.l. 
+              La mia formazione tecnica e la certificazione OSS mi permettono di affrontare 
+              le sfide lavorative con un approccio analitico e orientato alla soluzione.
             </p>
 
             {/* Stats */}
@@ -44,12 +45,12 @@ const AboutSection = () => {
               className="grid grid-cols-3 gap-6 pt-6 border-t border-border"
             >
               <div>
-                <span className="text-3xl md:text-4xl font-display font-semibold text-primary">15+</span>
+                <span className="text-3xl md:text-4xl font-display font-semibold text-primary">35+</span>
                 <p className="text-sm text-muted-foreground mt-1">Anni di Esperienza</p>
               </div>
               <div>
-                <span className="text-3xl md:text-4xl font-display font-semibold text-primary">2</span>
-                <p className="text-sm text-muted-foreground mt-1">Aziende Principali</p>
+                <span className="text-3xl md:text-4xl font-display font-semibold text-primary">6</span>
+                <p className="text-sm text-muted-foreground mt-1">Aziende</p>
               </div>
               <div>
                 <span className="text-3xl md:text-4xl font-display font-semibold text-primary">100%</span>
