@@ -73,9 +73,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Email</h3>
-                <p className="text-muted-foreground text-sm mt-1">
-                  sabrina.benetazzo@email.com
-                </p>
+                <a href="mailto:sabrina.benetazzo@gmail.com" className="text-muted-foreground text-sm mt-1 hover:text-accent transition-colors">
+                  sabrina.benetazzo@gmail.com
+                </a>
               </div>
             </div>
 
@@ -85,9 +85,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Telefono</h3>
-                <p className="text-muted-foreground text-sm mt-1">
-                  +39 XXX XXX XXXX
-                </p>
+                <a href="tel:+393339623363" className="text-muted-foreground text-sm mt-1 hover:text-accent transition-colors">
+                  +39 333 962 3363
+                </a>
               </div>
             </div>
 
@@ -98,7 +98,8 @@ const ContactSection = () => {
               <div>
                 <h3 className="font-semibold text-foreground">Località</h3>
                 <p className="text-muted-foreground text-sm mt-1">
-                  Veneto, Italia
+                  Via Michelangelo Buonarroti 43/D<br />
+                  Merate (LC), Italia
                 </p>
               </div>
             </div>
