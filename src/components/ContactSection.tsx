@@ -26,21 +26,32 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
         body: formData,
       });
 
       if (error) {
-        console.error('Error sending email:', error);
+        console.error("Error sending email:", error);
         toast({
           title: "Errore",
-          description: "Si è verificato un errore nell'invio del messaggio. Riprova più tardi.",
+          description: error.message || "Impossibile inviare il messaggio. Riprova più tardi.",
           variant: "destructive",
         });
         return;
       }
 
-      console.log('Email sent successfully:', data);
+      if (!data?.success) {
+        toast({
+          title: "Invio non riuscito",
+          description:
+            data?.error ||
+            "Il servizio email ha rifiutato la richiesta. Verifica la configurazione e riprova.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      console.log("Email sent successfully:", data);
       toast({
         title: "Messaggio inviato!",
         description: "Grazie per avermi contattato. Risponderò al più presto.",

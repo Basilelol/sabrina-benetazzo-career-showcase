@@ -41,10 +41,13 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Send email to Sabrina
+    // Send email to destination
+    const from = Deno.env.get("RESEND_FROM") ?? "Sito CV <onboarding@resend.dev>";
+    const toEmail = Deno.env.get("CONTACT_TO_EMAIL") ?? "sabrina.benetazzo@gmail.com";
+
     const emailResponse = await resend.emails.send({
-      from: "Sito CV <onboarding@resend.dev>",
-      to: ["sabrina.benetazzo@gmail.com"],
+      from,
+      to: [toEmail],
       subject: `CONTATTO SITO LAVORO - ${subject}`,
       reply_to: email,
       html: `
@@ -62,9 +65,24 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    if (emailResponse.error) {
+      console.error("Resend error:", emailResponse.error);
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: emailResponse.error.message,
+          provider: "resend",
+        }),
+        {
+          status: 502,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
-    return new Response(JSON.stringify({ success: true, data: emailResponse }), {
+    console.log("Email sent successfully:", emailResponse.data);
+
+    return new Response(JSON.stringify({ success: true, data: emailResponse.data }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
