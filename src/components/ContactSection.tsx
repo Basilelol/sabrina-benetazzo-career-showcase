@@ -6,8 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -27,21 +26,12 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      if (!SUPABASE_URL) {
-        throw new Error('Backend non configurato');
-      }
-
-      const response = await fetch(`${SUPABASE_URL}/functions/v1/send-contact-email`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error('Error sending email:', errorData);
+      if (error) {
+        console.error('Error sending email:', error);
         toast({
           title: "Errore",
           description: "Si è verificato un errore nell'invio del messaggio. Riprova più tardi.",
@@ -49,8 +39,6 @@ const ContactSection = () => {
         });
         return;
       }
-
-      const data = await response.json();
 
       console.log('Email sent successfully:', data);
       toast({
